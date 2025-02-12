@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <div>
+            <h1 class= "header_text">Hi marveriee! Happy Valentine's Day.....</h1>
+            <h1 class= "header_text">Pwede ka ba?</h1>
+        </div>    
+
+        <div class="gif_container">
+            <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAi/cute.gif">
+        </div>
+
+        <div class="buttons">
+            <button class="btn" id="yesBtn" onclick="nextPage()">YES</button>
+            <button class="btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">NO</button>
+            <script>
+                function nextPage() 
+                {
+                    window.location.href = "yes.htm";
+                }
+
+                function moveButton()
+                {
+                   var noBtn = document.getElementById('noBtn');
+
+                   var maxY = window.innerHeight - noBtn.offsetHeight;
+
+                   var randomY = Math.random() * maxY;
+
+                   noBtn.style.top = randomY + 'px';
+
+                }
+            </script>
+        </div>
+    </body>
+</head>
+</html>
